@@ -3,7 +3,7 @@
 :root {
 	--black-ish: #282a36;
     --white-ish: #f8f8f2;
-    --grey: #44475a;
+    --grey: #f1f1f1;
     --light-grey: #BBB;
     --light-yellow: #ffeeb6;
     --blue: #3185FC;
@@ -45,7 +45,7 @@
 	--links: #424f63;
 	--url: #97b88b;
 	--link-text: var(--purple);
-	--separator: #4d5b72;
+	--separator: #f1f1f1;
 	--tokens: #a683bd;
 	--primary: var(--purple);
     --secondary: var(--razzmatazz);
@@ -64,25 +64,13 @@
 	--h6: #6783ff;
 }
 
-* {
-	border: 0 !important;
-	/* remove all borders, they're ugly */
-	/*	font: 1.1em Helvetica */
-	/* it doesn't work nicely */
-	/* font-family: Helvetica */
-}
-
 #react-root>div>div {
 	background: var(--main) !important;
 }
 
-.title-input {
+/* .title-input {
 	background-color: var(--main) !important;
-}
-
-.kYItFT>input {
-	background: var(--main) !important;
-}
+} */
 
 /* change selection color (it appears darker than it should) */
 ::selection {
@@ -243,9 +231,9 @@ a.bxcDPk div.note-count-label {
 }
 
 /* use mono font when editing stuff in popup windows */
-input.form-control {
-	font: 1.1em "Ubuntu Mono", "Fira Code", mono !important
-}
+/* input.form-control {
+	font: 1.1em "Comic Code", "Ubuntu Mono", "Fira Code", mono !important
+} */
 
 
 /* Based on arcticicestudio's Nord theme */
@@ -483,7 +471,7 @@ pre.cm-jn-code-block span.cm-comment.cm-jn-monospace.CodeMirror-selectedtext {
 
 span.cm-hr {
 	color: var(--separator) !important;
-	font-family: monospace !important;
+	font-family: 'Comic Code' !important;
 	letter-spacing: 1em !important;
 }
 
