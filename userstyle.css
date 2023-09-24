@@ -1,17 +1,17 @@
 /* For styling the rendered Markdown */
 
 :root {
-    --black-ish: #111;
-    --white-ish: #d4dae8;
-    --grey: #32353b;
+    --black-ish: #282a36;
+    --white-ish: #f8f8f2;
+    --grey: #6272a4;
     --light-grey: #BBB;
-    --yellow: #d1b557;
     --light-yellow: #ffeeb6;
     --blue: #3185FC;
+    --purple: #bd93f9;
     --dark-blue: #48589e;
-    --red: #D00;
-    --green: #20CE88;
-    --razzmatazz: #4b5362;
+    --red: #ff5555;
+    --green: #50fa7b;
+    --razzmatazz: #44475a;
     --block-print: #f1f1f1;
 
     --tiny: 0.2rem;
@@ -36,21 +36,21 @@
 }
 
 body {
-    --primary: var(--yellow);
+    --primary: var(--purple);
     --secondary: var(--razzmatazz);
     --background2: #2c2f36;
-    --text: #989ca5;
-    --headers: #a3a0c9;
-    --comment: #515d79;
+    --text: #f8f8f2;
+    --headers: #bd93f9;
+    --comment: #44475a;
     --params: #9970af;
     --keywords: #5c93a3;
     --titles: #7cbbd1;
-    --h1: #8eb48e;
-	--h2: #a3a0c9;
-	--h3: #6db8b4;
-	--h4: #f17d7d;
-	--h5: #71eb71;
-	--h6: #6783ff;
+    --h1: #ff79c6;
+	--h2: #bd93f9;
+	--h3: #50fa7b;
+	--h4: #ffb86c;
+	--h5: #f1fa8c;
+	--h6: #8be9fd;
 }
 
 /*****************************************************
@@ -145,7 +145,7 @@ h6,
 ul,
 table {
     margin-top: 0;
-    font-family: 'Noto Sans JP', sans;
+    font-family: 'Comic Code', sans;
 }
 
 p { color: var(--text); margin-bottom: var(--lessthan-regular) }
@@ -209,17 +209,17 @@ hr,
 
 /* INTERNAL LINKS COLOUR */
 a[data-resource-id] {
-    color: var(--yellow) !important;
+    color: var(--purple) !important;
     /* https://discourse.joplinapp.org/t/share-your-css/1730/65 */
 }
 
 a[data-resource-id]:hover {
-    border-bottom: 2px dashed var(--yellow) !important;
+    border-bottom: 2px dashed var(--purple) !important;
 }
 
 /* JOPLIN ICON IN JOPLIN INTERNAL LINK */
 .resource-icon {
-    background: var(--yellow) !important;
+    background: var(--purple) !important;
     transform: scale(0.8);
     top: .3em !important;
 }
@@ -230,7 +230,7 @@ a[data-resource-id]:hover {
 .code,
 code,
 pre {
-    font-family: "Fira Code" !important;
+    font-family: "Comic Code" !important;
     font-size: var(--lessthan-regular);
     break-inside: avoid;
 }
@@ -240,7 +240,7 @@ pre {
     padding: .3em .4em .2em .4em !important;
     border-radius: 3px !important;
     color: var(--primary) !important;
-    background: var(--grey) !important;
+    background: var(--razzmatazz) !important;
     border: none !important;
 }
 
@@ -277,134 +277,4 @@ mark {
     overflow-x: auto;
     white-space: nowrap;
     border: none;
-}
-
-/************
-  PDF EXPORT 
- ************/
-@media print {
-
-    @page {
-        size: A4 portrait;
-        /* vertical | horizontal */
-        margin: 10mm 5mm !important;  
-    }
-
-    body,
-    p,
-    ol,
-    ul,
-    li,
-    em,
-    strong,
-    b {
-        color: var(--black-ish) !important;
-    }
-
-    body, code {
-        line-height: 1em !important;
-        font-size: 0.5rem !important;
-    }
-    
-    #joplin-container-content{padding-left: 0 !important; padding-right: 0 !important;}
-
-    .exported-note-title {
-        border: 0;
-        text-align: left;
-        font-size: 12pt !important;
-        color: #bbb;
-        font-style: italic;
-    }
-    body {
-        font-family: 'Noto Sans JP', sans;
-        background: white;
-        -webkit-print-color-adjust: exact !important;
-        filter: grayscale(1);
-        /* render auto-column layout */
-        column-count: 2;
-        /* column-width: 15rem; */
-        column-gap: 1rem;
-        column-rule-color: #ddd;
-        column-rule-style: dashed;
-        column-rule-width: 1px;
-    }
-
-    #rendered-md{padding: 0 !important;margin: 0 !important;}
-
-    hr{
-        margin-left: 0;
-        margin-right: 0;
-        border-width: 1px !important;
-        border-color: #ddd !important;
-    }
-
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: black;
-        border: 0
-    }
-    h1, h2, h3, caption {
-        page-break-after: avoid !important;
-    }
-
-    a {
-        color: var(--dark-blue) !important;
-        text-decoration: none;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-        color: #aaa !important;
-    }
-
-    .hljs{padding: 2px !important; border-radius: 0 !important;}
-
-    .hljs-comment{color: #666 !important; font-weight: 300;}
-
-    a[data-resource-id],
-    .hljs-built_in, .hljs-class, .hljs-title
-    { color: #444 !important; }
-
-    .hljs-string
-    { color: #000 !important; font-weight: 400;}
-
-    .code,
-    code,
-    pre,
-    .inline-code,
-    .mce-content-body code {
-        border-radius: 5px !important;
-        outline: none;
-        border: none !important;
-        background: var(--block-print) !important;
-        color: black !important;
-        font-weight: 500;
-        line-height: 1.5em !important;
-    }
-
-    table,
-    pre {
-        page-break-inside: avoid
-    }
-
-    pre {
-        word-wrap: break-word
-    }
-
-    .footnotes-sep {
-        border-bottom: 2px dashed var(--block-print) !important
-    }
-
-    blockquote {
-        color: #111;
-        font: italic 1em "Roboto", Merriweather, Times, serif;
-        margin: 1em 0;
-        border-left: 4px dashed var(--block-print);
-        padding-left: .6em
-    }
 }

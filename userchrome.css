@@ -1,16 +1,18 @@
 /* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
 
 :root {
-	--black-ish: #111;
-	--white-ish: #E0E0E0;
-	--dark-grey: #222;
-	--light-grey: #BBB;
-	--yellow: #d1b557;
-	--light-yellow: #ffeeb6;
-	--blue: #3185FC;
-	--red: #D00;
-	--green: #20CE88;
-	--razzmatazz: #4b5362;
+	--black-ish: #282a36;
+    --white-ish: #f8f8f2;
+    --grey: #44475a;
+    --light-grey: #BBB;
+    --light-yellow: #ffeeb6;
+    --blue: #3185FC;
+    --purple: #bd93f9;
+    --dark-blue: #48589e;
+    --red: #ff5555;
+    --green: #50fa7b;
+    --razzmatazz: #44475a;
+    --block-print: #f1f1f1;
 
 	--header-size: 1rem;
 	--tiny: 0.2rem;
@@ -33,27 +35,33 @@
 	--trans: .5s;
 	--quicktrans: .1s;
 
-	--primary: var(--yellow);
-	--headers: #8f97a7;
+	--primary: var(--purple);
 	--main: #282c34;
 	--dark-main: #252930;
 	--dark-main-selected: #6cb9cb;
-	--h1: #8eb48e;
-	--h2: #a3a0c9;
-	--h3: #6db8b4;
-	--h4: #f17d7d;
-	--h5: #71eb71;
-	--h6: #6783ff;
-	--text: #adb6c4;
 	--text-p: #d46a24;
 	--image-text: #bb8968;
 	--strong: #97e7b6;
 	--links: #424f63;
 	--url: #97b88b;
-	--link-text: var(--yellow);
+	--link-text: var(--purple);
 	--separator: #4d5b72;
 	--tokens: #a683bd;
-	--comment: #96acce;
+	--primary: var(--purple);
+    --secondary: var(--razzmatazz);
+    --background2: #2c2f36;
+    --text: #f8f8f2;
+    --headers: #bd93f9;
+    --comment: #515d79;
+    --params: #9970af;
+    --keywords: #5c93a3;
+    --titles: #7cbbd1;
+    --h1: #8eb48e;
+	--h2: #a3a0c9;
+	--h3: #6db8b4;
+	--h4: #f17d7d;
+	--h5: #71eb71;
+	--h6: #6783ff;
 }
 
 * {
@@ -457,7 +465,7 @@ div.CodeMirror span.cm-comment.cm-jn-inline-code {
   	padding-left: 0 !important;
 }
 div.CodeMirror span.cm-comment.cm-jn-inline-code.CodeMirror-selectedtext {
-	background-color: var(--yellow)!important;
+	background-color: var(--purple)!important;
     color: var(--dark-grey) !important;
 	margin-left: -1px;
     margin-right: -1px;
