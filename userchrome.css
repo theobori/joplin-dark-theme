@@ -64,6 +64,11 @@
 	--h6: #6783ff;
 }
 
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
+
 #react-root>div>div {
 	background: var(--main) !important;
 }
